@@ -14,7 +14,6 @@ class BillingSheetImportController extends Controller
 {
     public function import()
     {
-        //return 'ok';
         $clients = Client::all();
         return view('admin2.pages.campaign.bulk-import', compact('clients'));
     }
