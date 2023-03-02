@@ -178,7 +178,6 @@ class CampaignController extends Controller
 
         // $campaign = Campaign::find($uuid);
         $campaign = Campaign::where('uuid', $uuid)->firstOrFail();
-        // dd($campaign);
 
         $campaign->bill_submission_date = $request->bill_submission_date;
         $campaign->client_id = $request->client_id;
@@ -287,7 +286,6 @@ class CampaignController extends Controller
 
     public function getCommissionValue(Request $request)
     {
-//        $query = request()->input('query');
 
         $selectedOption = $request->input('client_id');
         $value = Client::where('id', $selectedOption)
