@@ -27,13 +27,6 @@ class CampaignBillingController extends Controller
     }
 
   
-
-    // public function show($uuid)
-    // {
-    //     $campaign = Campaign::where('uuid', $uuid)->firstOrFail();
-    //     $vat = Vat::where('id', 1)->first();
-    //     return view('pages.billing.', compact('campaign','vat'));
-    // }
     public function edit($uuid)
     {
         $campaign = Campaign::where('uuid', $uuid)->firstOrFail();
